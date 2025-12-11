@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turboindex"
+version = "0.1.0"
+description = "TurboIndex: a modern MySQL query optimization CLI with profiling, rewriting, and index recommendations."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "TurboIndex Contributors" }
+]
+keywords = ["mysql", "database", "performance", "optimizer", "index"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Topic :: Database",
+  "Topic :: Database :: Database Engines/Servers",
+  "Environment :: Console"
+]
+dependencies = [
+  "mysql-connector-python>=8.0.0",
+  "rich>=13.0.0",
+  "tomli>=2.0.0; python_version < '3.11'"
+]
+
+[project.scripts]
+turboindex = "turboindex.cli:main"
